@@ -352,7 +352,7 @@ header {
 .Services-1{
     width: 30%;
     box-sizing: border-box;
-    background: #222b2b;  
+    background: #252929;  
     border-radius: 8px; 
     padding: 30px;
     text-align: center;
@@ -383,7 +383,7 @@ header {
     font-size: 1rem; 
     color: white; 
     margin-bottom: 20px;
-    line-height: 1.5; 
+    line-height: 1.4; 
 }
 
 .Services-list a {
@@ -398,6 +398,135 @@ header {
 .Services-list a:hover {
     text-decoration: underline; 
     color: navy;
+}
+.Project{
+    margin-left: 150px;
+    height: 80vh;
+}
+.Project h1{
+    color: white;
+    font-size: 60px;
+}
+/* General Styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-left {
+    margin-right: 20px;
+}
+
+.contact-right {
+    margin-left: 20px;
+}
+
+.subtitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #396060;
+}
+
+.contact-left p {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.contact-left p i {
+    color: #437070;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.social-icon {
+    margin-top: 20px;
+}
+
+.social-icon a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon a:hover {
+    color: #487b7b;
+    transform: translateY(-5px);
+}
+
+.content-button5 {
+    margin-top: 20px;
+    background: #437070;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border: 1px solid #437070;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.content-button5:hover {
+    background: transparent;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #333;
+    padding: 15px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+form .btn-submit {
+    background: #437070;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+form .btn-submit:hover {
+    background: #2f4f4f;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ca1750;
 }
 
 @media(max-width:992px){
@@ -549,6 +678,7 @@ header {
     .Services {
         margin-left: 60px;
         margin-top: 20px;
+        height: 200vh;
     }
     .Services h1{
         font-size: 40px;
@@ -560,7 +690,29 @@ header {
     }
     .Services-list{
         margin-top: 10px;
+        margin-left: -20px;
         margin-right: 20px;
         
     }
+    .Services-1 i{
+        padding-top: 20px;
+    }
+    .Services-1 a{
+        padding-bottom: 20px;
+    }
+    .Services-1 h2{
+        font-size: 25px;
+
+    }
+    .row{
+        display: block;
+    }
+    .contact-right{
+        margin-top: -100px;
+    }
+    #contact{
+        margin-left: 40px;
+        margin-top: -60px;
+    }
 }
+
