@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vansh Singhal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background: black;">
+    <header>
+        <div class="nav-image">
+            <img src="VAnshlogo.png" alt="Logo">
+        </div>
+        <div class="nav-ul">
+            <ul>
+                <li class="li1">Home</li>
+                <li class="li1">About</li>
+                <li class="li2">Services</li>
+                <li class="li3">Project</li>
+                <li class="li3">Contact</li>
+            </ul>
+        </div>
+        <div class="show">
+            <button class="butt" onclick="showContent()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="overlay-content" id="root">
+            <button class="butt1" onclick="showContent()">
+                <p>×</p>
+            </button>
+            <a href="#">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#">Project</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <div class="Home-content">
+        <div class="Content">
+            <h2>Hi! I am <span>Vansh Singhal</span></h2>
+            <h1>FrontEnd </h1>
+            <span class="sapnh"> Developer</span>
+
+        </div>
+
+        <div class="circle">
+            <div class="circle">
+            </div>
+        </div>
+        <div class="icon">
+            <a href="https://github.com/VanshSinghal01" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/vansh-singhal-b9b022285" target="_blank"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+            <a href="mailto:singhalvansh74@gmail.com" target="_blank"><i class="fa fa-envelope"
+                    aria-hidden="true"></i></a>
+            <a href="Mob No:+919027208620"><i class="fa fa-phone" aria-hidden="true"></i></a>
+        </div>
+        <div class="icons">
+            <a href="https://github.com/VanshSinghal01" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/vansh-singhal-b9b022285" target="_blank"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+        </div>
+        <div class="content-button">
+            <button class="content-button1" onclick="goo()">Download CV</button>
+            <button class="content-button2" onclick="Email()">Hire ME</button>
+        </div>
+
+    </div>
+
+    <div class="About" id="About">
+        <div class="im">
+            <img src="vnsh1.JPG" alt="profile">
+        </div>
+
+        <div class="About-content">
+            <h1>About Me</h1>
+            <p>"Welcome to my portfolio website! I am a passionate front-end developer currently pursuing a Bachelor of
+                Computer Applications (BCA). With strong skills in HTML, CSS, JavaScript, and React, I am dedicated to
+                creating engaging and user-friendly web experiences. I am eager to apply my knowledge in real-world
+                projects and collaborate with innovative teams in the tech industry. Please explore my projects and feel
+                free to reach out—I am always excited to connect and learn!"</p>
+            <div class="About-ul">
+                <ul class="tab-titles">
+                    <li class="tab-link active-link" onclick="showSection('skills', this)">Skills</li>
+                    <li class="tab-link" onclick="showSection('education', this)">Education</li>
+                    <li class="tab-link" onclick="showSection('experience', this)">Experience</li>
+                </ul>
+            </div>
+            <div class="section" id="skills">
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Node.js</li>
+                    <li>Bootstrap</li>
+                    <li>Git & Github</li>
+                </ul>
+            </div>
+            <div class="section" id="experience">
+                <h3>Codsoft Internship</h3>
+                <img class="expimg" src="certificate.png" alt="Certificate">
+            </div>
+            <div class="section" id="education">
+                <h4>High School</h4>
+                <p>Modern Public School</p>
+                <h4>Intermideate</h4>
+                <p>Modern Public School</p>
+                <h4>Bachelor of Computer Applications</h4>
+                <p>Chaudhary Charan Singh University (Meerut)</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="Services" id="Services">
+        <h1>My Services</h1>
+        <div class="Services-list">
+            <div class="Services-1">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h2>Frontent work</h2>
+                <p> I am a passionate web developer with a strong background in creating dynamic and user-friendly
+                    websites.
+                    My goal is to contribute to impactful projects that make a
+                    difference while growing as a professional in the tech industry.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="Services-1">
+                <i class="fa fa-magic" aria-hidden="true"></i>
+                <h2>Designing</h2>
+                <p> As an (Artist) i love to create someting different because i am so creative persone (frontent
+                    developer)
+                    By staying current with design trends and conducting user research,
+                    I continuously refine my designs to meet the needs of our users. </p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="Services-1">
+                <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                <h2>Backend Developer</h2>
+                <p> Motivated and eager Backend Developer with foundational experience in Node.js and a strong interest
+                    in server-side development. Ready to contribute to backend projects and continue learning in
+                    a professional environment. </p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./port.js"></script>
+</body>
+
+</html>
