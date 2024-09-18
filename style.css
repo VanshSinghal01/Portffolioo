@@ -690,7 +690,7 @@ form .btn-submit:hover {
     .Services {
         margin-left: 60px;
         margin-top: 20px;
-        height: 200vh;
+        height: 175vh;
     }
     .Services h1{
         font-size: 40px;
@@ -724,7 +724,7 @@ form .btn-submit:hover {
     }
     #contact{
         margin-left: 40px;
-        margin-top: -60px;
+        margin-top: -20px;
     }
     .contact-right{
         margin-top: 0px;
