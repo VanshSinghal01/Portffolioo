@@ -7,7 +7,18 @@
     <title>Vansh Singhal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "2sKhzBfEoqLLrQxOD",
+            });
+        })();
+    </script>
 </head>
+
 
 <body style="background: black;">
     <header>
@@ -33,9 +44,12 @@
             </button>
             <a href="#">Home</a>
             <a href="#About">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
             <a href="#Services">Services</a>
             <a href="#">Project</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
     </header>
 
@@ -127,28 +141,40 @@
             <div class="Services-1">
                 <i class="fa fa-code" aria-hidden="true"></i>
                 <h2>Frontent work</h2>
-                <p> I am a passionate web developer with a strong background in creating dynamic and user-friendly
-                    websites.
-                    My goal is to contribute to impactful projects that make a
-                    difference while growing as a professional in the tech industry.
-                </p>
+                <ul class="Services-ul">
+                    <li>
+                        <h3>UI Implementation:</h3> Convert designs into responsive, user-friendly web interfaces using
+                        HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                        <h3>Interactive Features:</h3>Implement dynamic elements and interactions with frameworks like
+                        React.js
+                    </li>
+                </ul>
                 <a href="#">learn more</a>
             </div>
             <div class="Services-1">
                 <i class="fa fa-magic" aria-hidden="true"></i>
                 <h2>Designing</h2>
-                <p> As an (Artist) i love to create someting different because i am so creative persone (frontent
-                    developer)
-                    By staying current with design trends and conducting user research,
-                    I continuously refine my designs to meet the needs of our users. </p>
+                <ul class="Services-ul">
+                    <li>
+                        <h3>Responsive Design:</h3> Design for various devices and screen sizes to ensure a consistent
+                        user experience.
+                    </li>
+                </ul>
                 <a href="#">learn more</a>
             </div>
             <div class="Services-1">
                 <i class="fa fa-file-code-o" aria-hidden="true"></i>
                 <h2>Backend Developer</h2>
-                <p> Motivated and eager Backend Developer with foundational experience in Node.js and a strong interest
-                    in server-side development. Ready to contribute to backend projects and continue learning in
-                    a professional environment. </p>
+                <ul class="Services-ul">
+                    <li>
+                        <h3>Node.js:</h3> Develop server-side logic and APIs using Node.js for scalable applications
+                    </li>
+                    <li>
+                        <h3>Express.js:</h3>Build robust and efficient RESTful APIs with Express.js.
+                    </li>
+                </ul>
                 <a href="#">learn more</a>
             </div>
         </div>
@@ -167,29 +193,60 @@
                     <p><i class="fa fa-envelope" aria-hidden="true"></i>singhalvansh74@gmail.com</p>
                     <p><i class="fa fa-phone" aria-hidden="true"></i>90272086</p>
                     <div class="social-icon">
-                        <a href="https://www.instagram.com/vnsh__singhl?igsh=dXJndmV4d2k5a29m&utm_source=qr"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://www.linkedin.com/in/vansh-singhal-b9b022285"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/vnsh__singhl?igsh=dXJndmV4d2k5a29m&utm_source=qr"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/vansh-singhal-b9b022285"><i class="fa fa-linkedin"
+                                aria-hidden="true"></i></a>
                         <a href="https://github.com/VanshSinghal01"><i class="fa fa-github" aria-hidden="true"></i></a>
                     </div>
                     <button class="content-button5" onclick="goo()">Download CV</button>
                 </div>
-                <!-- <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                <div class="contact-right">
+                    <form id="contact-form" onsubmit="sendEmail(event)">
+                        <input type="text" name="Name" placeholder="Your Name" required id="name">
+                        <input type="email" name="Email" placeholder="Your Email" required id="email">
+                        <textarea name="message" rows="6" placeholder="Your Message" id="message" required></textarea>
                         <button type="submit" class="btn btn-submit">Submit</button>
                     </form>
                     <span id="msg"></span>
-                </div> -->
+                </div>
+                
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 Vansh Singhal. All rights reserved. <i class="fa fa-heart" aria-hidden="true"></i> Portfolio</p>
+            <p>&copy; 2024 Vansh Singhal. All rights reserved Portfolio...</p>
         </div>
     </div>
-    
+
     <script src="./port.js"></script>
+
+
+    <script>
+        (function(){
+            emailjs.init("2sKhzBfEoqLLrQxOD"); 
+        })();
+    
+        function sendEmail(event) {
+            event.preventDefault(); 
+    
+            var params = {
+                from_name: document.getElementById('name').value,
+                email_id: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+    
+            emailjs.send("service_evtm13q", "template_pry1kg9", params)
+                .then((response) => {
+                    document.getElementById('msg').innerText = "Email sent successfully!";
+                    document.getElementById('contact-form').reset(); 
+                }, (error) => {
+                    document.getElementById('msg').innerText = "Failed to send email. Please try again.";
+                    console.error('Error sending email:', error);
+                });
+        }
+    </script>
+    
+    
 </body>
 
 </html>

@@ -14,6 +14,7 @@ function goo() {
 }
 
 function Email() {
+    window.open('mailto:singhalvansh74@gmail.com')
 
 }
 
