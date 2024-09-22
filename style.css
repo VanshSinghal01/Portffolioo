@@ -811,6 +811,9 @@ form .btn-submit:hover {
         margin-top: 0px;
         margin-left: 0px;
     }
+      .upward {
+        height: 100%; /* Always show the upward section on mobile */
+    }
     
 }
 

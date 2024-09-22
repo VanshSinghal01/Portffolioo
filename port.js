@@ -45,4 +45,13 @@ function showSection(Section, tabElement) {
     tabElement.classList.add("active-link");
     
 }
-
+function toggleUpward(element) {
+    const upward = element.querySelector('.upward');
+    if (window.innerWidth <= 480) { // Check if it's a mobile screen
+        if (upward.style.height === '100%') {
+            upward.style.height = '0'; // Collapse
+        } else {
+            upward.style.height = '100%'; // Expand
+        }
+    }
+}
