@@ -27,11 +27,12 @@
         </div>
         <div class="nav-ul">
             <ul>
-                <li class="li1">Home</li>
-                <li class="li1">About</li>
-                <li class="li2">Services</li>
-                <li class="li3">Project</li>
-                <li class="li3">Contact</li>
+                <a href="#"><li class="li1">Home</li></a>
+                <a href="#About"> <li class="li1">About</li></a>
+                <a href="#ull"><li class="li1">Skills</li></a>
+                <a href="#Services"><li class="li2">Services</li></a>
+                <a href="#Project"><li class="li3">Project</li></a>
+                <a href="#contact"><li class="li3">Contact</li></a>
             </ul>
         </div>
         <div class="show">
@@ -44,12 +45,10 @@
             </button>
             <a href="#">Home</a>
             <a href="#About">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
+            <a href="#ull">Skills</a>
             <a href="#Services">Services</a>
-            <a href="#">Project</a>
-            <a href="#contact">Contact</a>
+            <a href="#Project">Project</a>
+            <a href="#contact">Contact</a>    
         </div>
     </header>
 
@@ -99,7 +98,7 @@
                 creating engaging and user-friendly web experiences. I am eager to apply my knowledge in real-world
                 projects and collaborate with innovative teams in the tech industry. Please explore my projects and feel
                 free to reach out—I am always excited to connect and learn!"</p>
-            <div class="About-ul">
+            <div class="About-ul" id="ull">
                 <ul class="tab-titles">
                     <li class="tab-link active-link" onclick="showSection('skills', this)">Skills</li>
                     <li class="tab-link" onclick="showSection('education', this)">Education</li>
@@ -107,7 +106,7 @@
                 </ul>
             </div>
             <div class="section" id="skills">
-                <ul>
+                <ul class="">
                     <li>HTML5</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -180,10 +179,32 @@
         </div>
     </div>
 
-    <!-- <div class="Project" id="Project">>
+    <div class="Project" id="Project">>
         <h1>My Work</h1>
-        
-    </div> -->
+        <div class="Services-list">
+            <div class="Services-2">
+               <div class="upward">
+                <h1>Banking-System</h1>
+                <p>Banking System crafted with <span>React.js</span></p>
+                <a href="https://github.com/VanshSinghal01/React-Banking_System">See Details</a>
+               </div>
+            </div>
+            <div class="Services-2">
+                <div class="upward">
+                    <h1>Netflix-clone</h1>
+                    <p>Netflix clone crafted with Html, CSS and Some Java Script Methods.</p>
+                    <a href="https://vanshsinghal01.github.io/Netflix_Clone/">See Details</a>
+                   </div>
+            </div>
+            <div class="Services-2">
+                <div class="upward">
+                    <h1>Love Calculator</h1>
+                    <p>Love Calculator crafted with <span>React.js</span></p>
+                    <a href="https://github.com/VanshSinghal01/React_love-Calculator">See Details</a>
+                   </div>
+            </div>
+        </div>
+    </div>
 
     <div id="contact">
         <div class="container">

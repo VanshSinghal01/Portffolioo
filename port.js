@@ -43,5 +43,6 @@ function showSection(Section, tabElement) {
     document.getElementById(Section).classList.add("active-tab");
 
     tabElement.classList.add("active-link");
+    
 }
 
