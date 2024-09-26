@@ -51,7 +51,7 @@ function Upward() {
         if (upward.style.height === '100%') {
             upward.style.height = '0'; 
         } else {
-            upward.style.height = '100%'; // Expand
+            upward.style.height = '100%';
         }
     }
 }
