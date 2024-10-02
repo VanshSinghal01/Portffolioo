@@ -213,6 +213,7 @@ header {
 .About{
     display: flex;
     height: 80vh;
+   
 }
 .im img{
     height: 400px;
@@ -254,7 +255,7 @@ header {
 .About-content h1{
     color: white;
     margin-left: 17%;
-    font-size: 60px
+    font-size: 60px;
 }
 .About-content p{
     color: white;
@@ -615,6 +616,10 @@ form .btn-submit:hover {
 #msg{
     color: white;
 }
+#visitorCountOverlay{
+    color:white;
+    text-align: center;
+}
 @media(max-width:992px){
     .nav-ul{
         display: none;
@@ -736,7 +741,8 @@ form .btn-submit:hover {
         display: none;
     }
     .About{
-        margin-top: 20px;
+        margin-top: 100px;
+        position: relative;
     }
     .About-content{
         margin-right: 60px;
@@ -763,8 +769,9 @@ form .btn-submit:hover {
     }
     .Services {
         margin-left: 60px;
-        margin-top: 50px;
+        margin-top: 100px;
         height: 175vh;
+        position: relative;
     }
     .Services h1{
         font-size: 40px;
@@ -797,8 +804,9 @@ form .btn-submit:hover {
     }
     .Project{
         margin-left: 60px;
-        margin-top: -20px;
+        margin-top: 150px;
         height: 165vh;
+        position: relative;
     }
     .Project h1{
         font-size: 40px;
@@ -819,5 +827,19 @@ form .btn-submit:hover {
     }
    
     
+}
+@media(max-width:380px){
+    .About{
+        margin-top: 40px;
+        position: relative;
+    }
+    .Services{
+        margin-top: 50px;
+        position: relative;
+    }
+    .Project{
+        margin-top: -20px;
+        position: relative;
+    }
 }
 

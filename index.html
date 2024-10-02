@@ -17,12 +17,24 @@
         </div>
         <div class="nav-ul">
             <ul>
-                <a href="#"><li class="li1">Home</li></a>
-                <a href="#About"> <li class="li1">About</li></a>
-                <a href="#ull"><li class="li1">Skills</li></a>
-                <a href="#Services"><li class="li2">Services</li></a>
-                <a href="#Project"><li class="li3">Project</li></a>
-                <a href="#contact"><li class="li3">Contact</li></a>
+                <a href="#">
+                    <li class="li1">Home</li>
+                </a>
+                <a href="#About">
+                    <li class="li1">About</li>
+                </a>
+                <a href="#ull">
+                    <li class="li1">Skills</li>
+                </a>
+                <a href="#Services">
+                    <li class="li2">Services</li>
+                </a>
+                <a href="#Project">
+                    <li class="li3">Project</li>
+                </a>
+                <a href="#contact">
+                    <li class="li3">Contact</li>
+                </a>
             </ul>
         </div>
         <div class="show">
@@ -38,7 +50,8 @@
             <a href="#ull">Skills</a>
             <a href="#Services">Services</a>
             <a href="#Project">Project</a>
-            <a href="#contact">Contact</a>    
+            <a href="#contact">Contact</a>
+
         </div>
     </header>
 
@@ -173,25 +186,25 @@
         <h1>My Work</h1>
         <div class="Services-list">
             <div class="Services-2" onclick="Upward()">
-               <div class="upward" id="ward">
-                <h1>Banking-System</h1>
-                <p>Banking System crafted with <span>React.js</span></p>
-                <a href="https://github.com/VanshSinghal01/React-Banking_System">See Details</a>
-               </div>
+                <div class="upward" id="ward">
+                    <h1>Banking-System</h1>
+                    <p>Banking System crafted with <span>React.js</span></p>
+                    <a href="https://github.com/VanshSinghal01/React-Banking_System">See Details</a>
+                </div>
             </div>
             <div class="Services-2" onclick="Upward()">
                 <div class="upward" id="ward">
                     <h1>Netflix-clone</h1>
                     <p>Netflix clone crafted with Html, CSS and Some Java Script Methods.</p>
                     <a href="https://vanshsinghal01.github.io/Netflix_Clone/">See Details</a>
-                   </div>
+                </div>
             </div>
             <div class="Services-2" onclick="Upward()">
                 <div class="upward" id="ward">
                     <h1>Love Calculator</h1>
                     <p>Love Calculator crafted with <span>React.js</span></p>
                     <a href="https://github.com/VanshSinghal01/React_love-Calculator">See Details</a>
-                   </div>
+                </div>
             </div>
         </div>
     </div>
@@ -221,12 +234,16 @@
                     </form>
                     <span id="msg"></span>
                 </div>
-                
+
             </div>
         </div>
         <div class="copyright">
             <p>&copy; 2024 Vansh Singhal. All rights reserved Portfolio...</p>
         </div>
+        <div id="visitorCountOverlay">
+            Visitor Count: <span id="visitorCount">0</span>
+        </div>
+
     </div>
 
     <script src="./port.js"></script>
@@ -242,31 +259,43 @@
     </script>
 
     <script>
-        (function(){
-            emailjs.init("2sKhzBfEoqLLrQxOD"); 
+        (function () {
+            emailjs.init("2sKhzBfEoqLLrQxOD");
         })();
-    
+
         function sendEmail(event) {
-            event.preventDefault(); 
-    
+            event.preventDefault();
+
             var params = {
                 from_name: document.getElementById('name').value,
                 email_id: document.getElementById('email').value,
                 message: document.getElementById('message').value
             };
-    
+
             emailjs.send("service_evtm13q", "template_pry1kg9", params)
                 .then((response) => {
                     document.getElementById('msg').innerText = "Email sent successfully!";
-                    document.getElementById('contact-form').reset(); 
+                    document.getElementById('contact-form').reset();
                 }, (error) => {
                     document.getElementById('msg').innerText = "Failed to send email. Please try again.";
                     console.error('Error sending email:', error);
                 });
         }
     </script>
-    
-    
+    <script>
+        function updateVisitorCount() {
+
+            let count = localStorage.getItem('visitorCount') || 0;
+            count++;
+            localStorage.setItem('visitorCount', count);
+            document.getElementById('visitorCount').innerText = count;
+            document.getElementById('visitorCountOverlay').style.display = 'block';
+        }
+
+        window.onload = updateVisitorCount;
+    </script>
+
+
 </body>
 
 </html>
