@@ -741,8 +741,9 @@ form .btn-submit:hover {
         display: none;
     }
     .About{
-        margin-top: 50px;
+        margin-top: 70px;
         position: relative;
+        min-height:90vh ;
     }
     .About-content{
         margin-right: 60px;
@@ -770,7 +771,7 @@ form .btn-submit:hover {
     .Services {
         margin-left: 60px;
         margin-top: 50px;
-        height: 175vh;
+        min-height: 200vh;
         position: relative;
     }
     .Services h1{
@@ -805,7 +806,7 @@ form .btn-submit:hover {
     .Project{
         margin-left: 60px;
         margin-top: 10px;
-        height: 165vh;
+        min-height: 165vh;
         position: relative;
     }
     .Project h1{
@@ -825,12 +826,13 @@ form .btn-submit:hover {
         margin-top: 0px;
         margin-left: 0px;
     }
+    
    
     
 }
 @media(max-width:380px){
     .About{
-        margin-top: 40px;
+        margin-top: 70px;
         position: relative;
     }
     .Services{

@@ -283,17 +283,41 @@
         }
     </script>
     <script>
-        function updateVisitorCount() {
-
+        async function updateVisitorCount() {
+           
             let count = localStorage.getItem('visitorCount') || 0;
             count++;
+    
             localStorage.setItem('visitorCount', count);
             document.getElementById('visitorCount').innerText = count;
             document.getElementById('visitorCountOverlay').style.display = 'block';
+    
+            const response = await fetch("https://api.ipify.org?format=json");
+            const data = await response.json();
+            const visitorIp = data.ip;
+    
+            fetch('http://localhost:5000/log-visitor', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    address: "Website Viewer", 
+                    visitorIp: visitorIp
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Visitor logged successfully:", data.message);
+            })
+            .catch((error) => {
+                console.error("Error logging visitor:", error);
+            });
         }
-
+    
         window.onload = updateVisitorCount;
     </script>
+    
 
 
 </body>
